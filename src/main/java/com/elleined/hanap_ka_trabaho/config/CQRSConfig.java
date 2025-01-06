@@ -16,7 +16,6 @@ public class CQRSConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        System.out.println(Arrays.toString(frontEndBaseURLS.toArray(new String[0])));
         registry.addMapping("/**")
                 .allowedOrigins(frontEndBaseURLS.toArray(new String[0])) // Front end base url
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
